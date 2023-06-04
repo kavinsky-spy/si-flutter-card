@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.blue,
         body: SafeArea(
             child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             CircleAvatar(
@@ -38,62 +39,36 @@ class MyApp extends StatelessWidget {
                   color: Colors.amber,
                   letterSpacing: 2.5),
             ),
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.white,
-                border: Border.all(
-                  color: Colors.white,
-                ),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(50),
-                ),
-              ),
-              padding: EdgeInsets.all(10.0),
-              margin: EdgeInsets.symmetric(vertical: 20.0, horizontal: 55.0),
-              child: Row(
-                children: [
-                  Icon(Icons.phone, color: Colors.blue),
-                  SizedBox(
-                    width: 10.0,
-                  ),
-                  Text(
-                    "+55 47996574029",
-                    style: TextStyle(
-                        color: Colors.blue,
-                        fontFamily: 'Inter',
-                        fontSize: 20.0),
-                  )
-                ],
+            SizedBox(
+              height: 20.0,
+              width: 150.0,
+              child: Divider(
+                color: Colors.blue.shade100,
               ),
             ),
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.white,
-                border: Border.all(
-                  color: Colors.white,
-                ),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(50),
+            Card(
+              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 55.0),
+              child: ListTile(
+                leading: Icon(Icons.phone, color: Colors.blue),
+                title: Text(
+                  "+55 47996574029",
+                  style: TextStyle(
+                      color: Colors.blue, fontFamily: 'Inter', fontSize: 18.0),
                 ),
               ),
-              padding: EdgeInsets.all(10.0),
-              margin: EdgeInsets.symmetric(vertical: 00.0, horizontal: 55.0),
-              child: Row(
-                children: [
-                  Icon(Icons.mail, color: Colors.blue),
-                  SizedBox(
-                    width: 10.0,
-                  ),
-                  Text(
+            ),
+            Card(
+                margin: EdgeInsets.symmetric(vertical: 00.0, horizontal: 55.0),
+                child: ListTile(
+                  leading: Icon(Icons.mail, color: Colors.blue),
+                  title: Text(
                     "juliorapa43@gmail.com",
                     style: TextStyle(
                         color: Colors.blue,
                         fontFamily: 'Inter',
-                        fontSize: 20.0),
-                  )
-                ],
-              ),
-            )
+                        fontSize: 18.0),
+                  ),
+                ))
           ],
         )),
       ),
